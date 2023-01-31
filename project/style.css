@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    justify-content: center;
+    padding: 45px;
+}
+
+form{
+    width: 35vw;
+    height: 30vh;
+    background-color: teal;
+    border-radius: 0.7rem;
+    padding: 45px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    margin: 2px;
+}
+.center input{
+    width: 70%;
+    height: 7vh;
+    border-radius: 0.6rem;
+    outline: none;
+    border: none;
+    margin: 2px;
+}
+.center label{
+    font-size: 1.2rem;
+    font-family: montserrat;
+    font-weight: bold;
+    color: white;
+}
