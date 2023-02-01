@@ -7,12 +7,12 @@ class Utilisateurs
     private $age = 23;
     private $email;
 
-    public function __construct(string $nom,string $prenom,int $age,string $email)
+    public function __construct(string $nom, string $prenom, int $age, string $email)
     {
-       echo "Vous êtes ". $this->nom = $nom. " ";
-       echo $this->prenom = $prenom;
-       echo "<br>Vous avez ".$this->age = $age ." ans ";
-       echo " Et voici votre email pour que nous puissions vous contacter " . $this->email = $email;
+        $this->setNom($nom);
+        $this->setPrenom($prenom);
+        $this->setAge($age);
+        $this->setEmail($email);
     }
 
     public function setNom($nom)
@@ -27,12 +27,10 @@ class Utilisateurs
 
     public function setEmail($email)
     {
-        
-        if(filter_var($email,FILTER_SANITIZE_EMAIL)){
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $this->email = $email;
-        }
-        else{
-            throw new Exception("L'information insérée n'est pas un mail, merci!");
+        } else {
+            throw new Exception("Attention, l'adresse email n'est pas valide");
         }
     }
 
@@ -65,3 +63,4 @@ class Utilisateurs
         return $this->age;
     }
 }
+?>
