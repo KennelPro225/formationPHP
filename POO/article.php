@@ -16,5 +16,5 @@ echo $article->getPrice();
 // echo $article->getReference();
 // echo "</br>";
 // echo $article->getName();
-// echo "</br>";
+
 // echo $article->getPrice(); 
