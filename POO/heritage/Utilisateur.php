@@ -11,7 +11,6 @@ class Utilisateur
     {
         $this->setNom($nom);
         $this->setPrenom($prenom);
-        // $this->setAge($age);
         $this->setEmail($email);
     }
 
