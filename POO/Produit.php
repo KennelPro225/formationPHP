@@ -5,7 +5,6 @@ class Produit
     private $name;
     private $price;
     private static $remise = 20;
-
     const LOWEST_PRICE = 0;
 
     public function __construct($reference, $name, $price)
@@ -27,11 +26,11 @@ class Produit
 
     public function getNewPrice()
     {
-        $newPrice = $this->price * (1 - self::$remise / 100);
-        if ($newPrice < self::LOWEST_PRICE) {
+        $this->price = $this->price * (1 - self::$remise / 100);
+        if ($this->price < self::LOWEST_PRICE) {
             throw new Exception("La remise ne peut pas exceder les 100%");
         } else {
-            return $newPrice;
+            return $this->price;
         }
     }
 
