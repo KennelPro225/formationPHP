@@ -6,7 +6,7 @@ $utilisateurs = new Utilisateurs("KASSI", "Ke", 20, "kennel.kassi@imako.digital"
 // $utilisateurs->prenom = 'Georges Kennel Emmanuel ';
 // echo "le nom de l'utilisateur est : ". $utilisateurs->nom;
 echo "<br>";
-// echo $utilisateurs->seConnecter();
+// echo $utilisateurs->seConecter();
 
 echo "Vous êtes " . $utilisateurs->getNom() . " ";
 echo $utilisateurs->getPrenom();
