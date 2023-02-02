@@ -63,4 +63,3 @@ class Utilisateurs
         return $this->age;
     }
 }
-?>
