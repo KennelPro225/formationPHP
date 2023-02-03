@@ -6,7 +6,7 @@ class Professeur implements Personnel
     private $anciennete;
     private $indice;
 
-    public function __construct(string $nom,int $anciennete,int $indice){
+    public function __construct($nom,$anciennete,$indice){
         $this->setNom($nom);
         $this->setAnciennete($anciennete);
         $this->setIndice($indice);
@@ -14,7 +14,7 @@ class Professeur implements Personnel
 
     public function calculerSalaire()
     {
-        return 150000*(1+$this->indice*$this->anciennete/100);
+        return 100000*(1+$this->getIndice()*$this->getAnciennete()/100);
     }
 
     public function setNom($nom)
