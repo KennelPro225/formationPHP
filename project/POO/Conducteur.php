@@ -1,7 +1,6 @@
 <?php
 include 'interface.php';
 require_once 'Voiture.php';
-
 class Conducteur extends Voiture
 {
     public $nom;
